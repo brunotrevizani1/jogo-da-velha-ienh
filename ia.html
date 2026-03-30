@@ -4,27 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Jogo da Velha</title>
+    <title>Jogo da Velha IA</title>
   </head>
   <body>
     <div class="cabecalho">
-      <h1 class="titulo">Jogo da velha 1 vs 1</h1>
-      <h2 class="subtitulo">Desafie outro jogador!</h2>
+      <h1 class="titulo">Jogo da velha vs IA</h1>
+      <h2 class="subtitulo">Escolha a dificuldade!</h2>
     </div>
 
     <div class="pai">
-      <a href="ia.html">
-        <button class="filho1">Jogar contra a IA</button>
+      <a href="index.html">
+        <button class="filho1">Jogar contra amigo</button>
       </a>
+
+      <select onchange="dificuldade = this.value">
+        <option value="facil">Fácil</option>
+        <option value="medio" selected>Médio</option>
+        <option value="dificil">Difícil</option>
+      </select>
 
       <div class="players">
         <div class="player">
-          <h2>Player 1:</h2>
+          <h2>Você:</h2>
           <img src="imgs/X.png" class="img1" />
         </div>
 
         <div class="player">
-          <h2>Player 2:</h2>
+          <h2>IA:</h2>
           <img src="imgs/O.png" class="img2" />
         </div>
       </div>
@@ -49,9 +55,9 @@
 
         <div class="placar">
           <h2>Placar</h2>
-          <p>X: <span id="scoreX">0</span></p>
+          <p>Você: <span id="scoreX">0</span></p>
           <p>E: <span id="scoreDraw">0</span></p>
-          <p>O: <span id="scoreO">0</span></p>
+          <p>IA: <span id="scoreO">0</span></p>
           <button onclick="resetarPlacar()">Resetar</button>
         </div>
       </div>
